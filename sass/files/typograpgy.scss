@@ -1,0 +1,45 @@
+.header {
+  &--primary {
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 5.5rem;
+    letter-spacing: 0.9rem;
+  }
+
+  &--secondary {
+    font-size: 4.3rem;
+    margin-bottom: 4rem;
+    color: $color-very-dark-desaturated-blue;
+  }
+  &--paragraph-primary {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: $color-very-dark-grayish-blue;
+  }
+  // text1
+  &--tertiary {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &--paragraph-secondary {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
+
+  &--paragraph-tertiary {
+    font-size: 8px;
+    color: $color-grayish-blue;
+  }
+  &-text1 {
+    color: $color-dark-desaturated-cyan;
+  }
+
+  &-text2 {
+    color: $color-very-dark-desaturated-blue;
+  }
+}

@@ -1,0 +1,32 @@
+.footer {
+  margin-top: -1rem;
+  padding: 10rem 0;
+  background-color: rgba($color-footer, 0.6);
+  text-align: center;
+
+  &--brand {
+    font-size: 3rem;
+    color: $color-dark-desaturated-cyan;
+    margin-bottom: 2rem;
+  }
+
+  &--list {
+    display: flex;
+    justify-content: center;
+
+    .list-item {
+      margin-bottom: 10rem;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+
+    .list-link {
+      color: $color-dark-desaturated-cyan;
+      font-size: 1.2rem;
+    }
+  }
+  a:not(:last-child) {
+    margin-right: 2rem;
+  }
+}

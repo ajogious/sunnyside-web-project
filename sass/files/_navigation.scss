@@ -1,0 +1,141 @@
+.nav {
+  width: 100%;
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  &__brand {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+
+    &--color {
+      background-color: $color-white;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &__list {
+    float: right;
+    &--item {
+      display: inline-block;
+      padding-top: 1rem;
+
+      &:not(:last-child) {
+        margin-right: 5rem;
+      }
+    }
+
+    &--link {
+      color: $color-white;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    #contact {
+      background-color: $color-white;
+      color: $color-very-dark-desaturated-blue;
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      border-radius: 10rem;
+      transition: all 0.2s;
+    }
+
+    #contact:hover {
+      background-color: $color-dark-blue-navbtn;
+      color: $color-white;
+    }
+  }
+
+  &__hamburger {
+    height: 5%;
+    display: none;
+    padding-top: 1rem;
+    cursor: pointer;
+    &--img {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 766px) {
+  .nav {
+    &__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 60%;
+      height: 40rem;
+      padding: 5rem;
+      background-color: $color-white;
+      z-index: 1;
+      animation: animateNavMobile 0.4s ease-in-out;
+
+      &--item {
+        margin-bottom: 5rem;
+        margin-left: 5rem;
+      }
+
+      &--link {
+        color: $color-very-dark-grayish-blue;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      #contact {
+        background-color: $color-yellow;
+        color: $color-black;
+        margin-right: 5rem;
+        font-size: 1.7rem;
+      }
+
+      #contact:hover {
+        background-color: $color-dark-blue-navbtn;
+        color: $color-white;
+      }
+    }
+
+    &__list::before {
+      content: '';
+      display: block;
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      top: -4rem;
+      right: 0;
+      background-color: $color-white;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+
+    &__hamburger {
+      display: block;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+// .transition {
+//   transition: all 0.5s ease-in-out;
+// }
+
+@keyframes animateNavMobile {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,120 @@
+// ==========================================================
+
+@media (max-width: 1111px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 952px) {
+  html {
+    font-size: 45%;
+  }
+
+  // image--grid
+  .grid {
+    position: relative;
+    &--text {
+      width: 70%;
+      height: 15rem;
+    }
+    &--text-box {
+      padding: 2rem 5rem;
+    }
+  }
+}
+
+@media (max-width: 766px) {
+  // ===============================
+  .grid {
+    &--text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+
+  .gallery {
+    &__row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--image {
+      .g-img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 668px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .grid__row {
+    flex-direction: column;
+    .col {
+      width: 100%;
+      text-align: center;
+    }
+
+    .box {
+      height: 100vh;
+    }
+  }
+
+  .btn {
+    &__primary::after,
+    &__secondary::after {
+      margin: -5px auto;
+    }
+  }
+
+  .grid {
+    &--tertiary {
+      font-size: 3.5rem;
+    }
+
+    &--paragraph-secondary {
+      font-size: 2.5rem;
+    }
+  }
+
+  .gallery {
+    &__row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonial {
+    padding: 20rem 0;
+    .test3 {
+      color: $color-very-dark-grayish-blue;
+    }
+    &__container {
+      max-width: 144rem;
+      margin: auto;
+    }
+    &--row {
+      flex-direction: column;
+      .card {
+        .p1 {
+          font-size: 1.2rem;
+        }
+
+        &--header {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 30%;
+  }
+}

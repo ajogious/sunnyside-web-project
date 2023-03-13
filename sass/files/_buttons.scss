@@ -1,0 +1,38 @@
+@mixin btnAfter($rgb, $opacity) {
+  content: '';
+  display: block;
+  background-color: $rgb;
+  width: 11rem;
+  height: 8px;
+  border-radius: 2rem;
+  margin-top: -5px;
+  margin-left: -5px;
+  z-index: -1;
+  opacity: $opacity;
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &--color1,
+  &--color2 {
+    color: $color-very-dark-desaturated-blue;
+  }
+
+  &__primary::after {
+    @include btnAfter($color-yellow, 0.4);
+  }
+
+  &__secondary::after {
+    @include btnAfter($color-soft-red, 0.4);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
